@@ -2,8 +2,6 @@ package com.example.astondevtest.service.impl;
 
 import com.example.astondevtest.exceptions.EntityNotFoundException;
 import com.example.astondevtest.exceptions.IncorrectPinCodeException;
-import com.example.astondevtest.mapper.SuperAccountMapper;
-import com.example.astondevtest.mapper.SuperAccountMapperImpl;
 import com.example.astondevtest.model.SuperAccountEntity;
 import com.example.astondevtest.repository.SuperAccountRepository;
 import com.example.astondevtest.service.interfaces.SuperAccountService;
@@ -17,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
