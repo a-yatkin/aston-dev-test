@@ -13,6 +13,10 @@ public class Validator {
         if (pincode.length() != 4) {
             throw new IncorrectPinCodeException("Length of pincode must be 4 digits");
         }
+        char[] chars = pincode.toCharArray();
+        for (char c : chars) {
+            if (!Character.isDigit(c)) { throw new IncorrectPinCodeException("PinCode must be FOUR DIGITS"); }
+        }
     }
 
     public static void moneyTransferPincodeCheck(String badPincode, String nicePincode) throws IncorrectPinCodeException {

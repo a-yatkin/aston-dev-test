@@ -2,6 +2,7 @@ package com.example.astondevtest.model;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
