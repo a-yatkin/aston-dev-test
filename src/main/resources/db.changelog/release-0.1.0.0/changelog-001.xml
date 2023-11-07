@@ -1,0 +1,54 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="a-yatkin" id="01">
+        <createTable  tableName="super_account">
+
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="super_account_pkey"/>
+            </column>
+
+            <column name="name"  type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="pincode" type="integer">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <!--changeSet author="a-yatkin" id="02">
+
+        <modifyDataType
+                tableName="super_account"
+                columnName="pincode" newDataType="varchar"/>
+
+    </changeSet-->
+
+</databaseChangeLog>
+
+<!--?xml version="1.1" encoding="UTF-8"?>
+<databasechangelog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeset id="1" author="andrew" runonchange="true">
+        <createtable tablename="super_account">
+            <column autoincrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primarykey="true">
+                </constraints>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false">
+                </constraints>
+            </column>
+            <column name="pin_code" type="INT">
+                <constraints nullable="false">
+                </constraints>
+            </column>
+        </createtable>
+    </changeset>
+</databasechangelog-->

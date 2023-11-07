@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  liquibase:
+    default-schema: aston_test
+    change-log: db.changelog/db.changelog-master.yaml
+    enabled: ${LIQUIBASE_ENABLED:true}
+    drop-first: ${LIQUIBASE_DROP_FIRST:false}
+
+  # docker run --name postgres-db -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres
